@@ -46,7 +46,7 @@ public class PrimeiraClasseJava {
 
 		Aluno aluno1 = new Aluno(); /*Aqui sera o nome do aluno */
 		
-		
+		System.out.println("bem vindo");
 		
 	
 		aluno1.setNome(nome);
