@@ -107,5 +107,7 @@ public class PrimeiraClasseJava {
 
 	}
 	
+	
+	System.out.println("media " + aluno.getAlunoAprovado2());
 
 }
