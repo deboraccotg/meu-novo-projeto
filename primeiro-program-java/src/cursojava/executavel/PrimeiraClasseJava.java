@@ -113,7 +113,7 @@ public class PrimeiraClasseJava {
 		
 		Aluno aluno2 = new Aluno();
 		aluno2.setNome("ALE");
-		aluno2.setNumeroCpf("12663");
+		aluno2.setNumeroCpf("125663");
 		
 		if(aluno1.equals(aluno2)) {
 			System.out.println("Alunos são iguais");
