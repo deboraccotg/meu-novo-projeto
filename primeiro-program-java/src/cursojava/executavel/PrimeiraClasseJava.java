@@ -23,7 +23,7 @@ public class PrimeiraClasseJava {
 		/* Aluno1 é uma referencia para o objeto aluno */
 		
 		
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		/*String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual a RG ?");
@@ -48,7 +48,7 @@ public class PrimeiraClasseJava {
 		
 		
 	
-		aluno1.setNome(nome);
+		/*aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
 		aluno1.setRegistroGeral(rg);
@@ -61,7 +61,7 @@ public class PrimeiraClasseJava {
 		aluno1.setNota1(Double.parseDouble(nota1));
 		aluno1.setNota2(Double.parseDouble(nota2));
 		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setNota4(Double.parseDouble(nota4));
+		aluno1.setNota4(Double.parseDouble(nota4));*/
 
 		
 		
@@ -94,20 +94,37 @@ public class PrimeiraClasseJava {
 		System.out.println(" Idade do aluno  e " +aluno2.getIdade());
 		System.out.println(" Nascimento do aluno  e " +aluno2.getDataNascimento());*/
 		
-		
+	/*	
 		Aluno aluno = new Aluno ();
 		System.out.println(aluno.toString());/*Descrição do objeto na memoria*/
-		System.out.println(aluno);/*Descrição do objeto na memoria*/
+	/*	System.out.println(aluno);/*Descrição do objeto na memoria*/
 		
-		 aluno = new Aluno ();
-		System.out.println(aluno1
+	/*	 aluno = new Aluno ();
+	/*	System.out.println(aluno1
 				.toString());/*Descrição do objeto na memoria*/		
-		System.out.println("media " + aluno.getMediaNota());
-		System.out.println("media " + aluno.getAlunoAprovado2());
-
-	}
+	/*	System.out.println("media " + aluno.getMediaNota());
+		System.out.println("media " + aluno.getAlunoAprovado2());*/
+		
+		
+		
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("ALE");
+		aluno1.setNumeroCpf("123");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("ALE");
+		aluno2.setNumeroCpf("1263");
+		
+		if(aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais");
+			
+		}else {
+			System.out.println("Alunos não são iguais");
+			
+		}
+		}
 	
+		
 	
-	System.out.println("media " + aluno.getAlunoAprovado2());
 
 }
