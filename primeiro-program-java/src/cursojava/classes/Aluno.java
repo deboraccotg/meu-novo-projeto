@@ -1,12 +1,13 @@
 package cursojava.classes;
 
-public class Aluno {
-	
-	
-	/*Esses são os atributos do Aluno */
+import java.util.ArrayList;
+import java.util.List;
 
-	
-    private String nome;
+public class Aluno {
+
+	/* Esses são os atributos do Aluno */
+
+	private String nome;
 	private int idade;
 	private String dataNascimento;
 	private String registroGeral;
@@ -16,181 +17,145 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	
-	
-	private Disciplina disciplina = new Disciplina();
-	
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
-	}
-	
-	public Disciplina getDisciplina() {
-		return disciplina;
-	}
-	
 
+	private List<Disciplina>  disciplinas = new ArrayList<Disciplina>();
 
-	
-	
-	
-	
-	public Aluno() { /*Cria os dados na memoria  padráo do java*/
-		
+	public void setDisciplinas(List<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
-	
-	
-	public Aluno (String nomePadrao) {
+	public List<Disciplina> getDisciplinas() {
+		return disciplinas;
+	}
+
+	public Aluno() { /* Cria os dados na memoria padráo do java */
+
+	}
+
+	public Aluno(String nomePadrao) {
 		nome = nomePadrao;
 	}
-		
-	public Aluno (String nomePadrao, int idadePadrao) {
+
+	public Aluno(String nomePadrao, int idadePadrao) {
 		nome = nomePadrao;
-		idade= idadePadrao;
-		
+		idade = idadePadrao;
+
 	}
-		
-	
-	/*SET é para adicionar ou receberdados para os atributos*/
-	/*GET é para resgatar ou obter o valor do atributo*/
-	
-	
-	/*Recebe dados*/
-	
+
+	/* SET é para adicionar ou receberdados para os atributos */
+	/* GET é para resgatar ou obter o valor do atributo */
+
+	/* Recebe dados */
+
 	public void setNome(String nome) {
 		this.nome = nome;
-		
+
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-
 	public int getIdade() {
 		return idade;
 	}
-
 
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
 
-
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
-
 
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
-
 	public String getRegistroGeral() {
 		return registroGeral;
 	}
-
 
 	public void setRegistroGeral(String registroGeral) {
 		this.registroGeral = registroGeral;
 	}
 
-
 	public String getNumeroCpf() {
 		return numeroCpf;
 	}
-
 
 	public void setNumeroCpf(String numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
 
-
 	public String getNomeMae() {
 		return nomeMae;
 	}
-
 
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
 
-
 	public String getNomePai() {
 		return nomePai;
 	}
-
 
 	public void setNomePai(String nomePai) {
 		this.nomePai = nomePai;
 	}
 
-
 	public String getDataMatricula() {
 		return dataMatricula;
 	}
-
 
 	public void setDataMatricula(String dataMatricula) {
 		this.dataMatricula = dataMatricula;
 	}
 
-
 	public String getNomeEscola() {
 		return nomeEscola;
 	}
-
 
 	public void setNomeEscola(String nomeEscola) {
 		this.nomeEscola = nomeEscola;
 	}
 
-
 	public String getSerieMatriculado() {
 		return serieMatriculado;
 	}
-
 
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
 
-
-	
 	public double getMediaNota() {
-		return (disciplina.getNota1() + disciplina.getNota2() +disciplina.getNota3() + disciplina.getNota4())/4;
+		return 0;
 	}
+
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + "]";
 	}
 
 	public boolean getAlunoAprovado() {
-		double media = this .getMediaNota();
+		double media = this.getMediaNota();
 		if (media >= 7) {
 			return true;
-		}else {
+		} else {
 			return false;
 		}
 	}
 
 	public String getAlunoAprovado2() {
-		double media = this .getMediaNota();
+		double media = this.getMediaNota();
 		if (media >= 7) {
 			return "ALUNO ESTA APROVADO";
-		}else {
+		} else {
 			return "ALUNO REPROVADO";
 		}
 	}
-
-
-	
-
-
-
 
 	@Override
 	public int hashCode() {
@@ -200,7 +165,6 @@ public class Aluno {
 		result = prime * result + ((numeroCpf == null) ? 0 : numeroCpf.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -224,7 +188,4 @@ public class Aluno {
 		return true;
 	}
 
-
-
-	
 }
