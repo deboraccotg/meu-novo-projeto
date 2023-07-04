@@ -3,6 +3,9 @@
  */
 package cursojava.executavel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -19,12 +22,15 @@ public class PrimeiraClasseJava {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		 List<Aluno> alunos  = new ArrayList<Aluno>();
+		 for (int  qtd= 0; qtd <=2;qtd++) {
 
 		/* new Aluno () é uma instancia (Criação de objetos) */
 		/* Aluno1 é uma referencia para o objeto aluno */
 
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
-		/*String idade = JOptionPane.showInputDialog("Qual a idade?");
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?"+qtd);
+		/*String idade = JOptionPane.showInputDialog("Qual a idade?" +qtd+ "?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual a RG ?");
 		String cpf = JOptionPane.showInputDialog("Qual a CPF?");
@@ -62,15 +68,34 @@ public class PrimeiraClasseJava {
 		}
 		
 		int escolha =JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina");
-		if  (escolha ==0) {
-			String disciplinaRemover = JOptionPane.showInputDialog("Qual a opcão 1,2,3 ou 	4");
-			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1);
+		
+		
+		if  (escolha ==0) {/*OPÇÃO SIM É 0*/
+			
+			int continurRemover=0;
+			int posicao =1;
+			
+			while(continurRemover==0) {
+				String disciplinaRemover = JOptionPane.showInputDialog("Qual a opcão 1,2,3 ou 	4");
+				aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()- posicao);
+				posicao ++;/*++ Soma +1*/
+				continurRemover= JOptionPane.showConfirmDialog(null, "Continuar a remover");
+				
+				
+			}
+			
+			
 		}
-		System.out.println(aluno1);
-		System.out.println(" Resultado  " + aluno1.getIdade());
-		System.out.println(" Media  e =" + aluno1.getAlunoAprovado2());
-
-
+			alunos.add(aluno1);
+		
+		 }
+		 
+		 for (Aluno aluno :alunos) {
+		System.out.println(aluno);
+		System.out.println(" Resultado  " + aluno.getMediaNota());
+		System.out.println(" Media  e =" + aluno.getAlunoAprovado2());
+		System.out.println("-------------------------");
+		 }
 
 		/* Aluno aluno2 = new Aluno(); /*Aqui sera o nome do aluno */
 		/*
@@ -114,6 +139,11 @@ public class PrimeiraClasseJava {
 		 * 
 		 * }
 		 */
+	}
+
+	private static void While(boolean b) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
