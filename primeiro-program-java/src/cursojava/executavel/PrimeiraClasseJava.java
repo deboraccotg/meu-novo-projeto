@@ -24,12 +24,12 @@ public class PrimeiraClasseJava {
 		// TODO Auto-generated method stub
 		
 		 List<Aluno> alunos  = new ArrayList<Aluno>();
-		 for (int  qtd= 0; qtd <=2;qtd++) {
+		 for (int  qtd= 1; qtd <=2;qtd++) {
 
 		/* new Aluno () é uma instancia (Criação de objetos) */
 		/* Aluno1 é uma referencia para o objeto aluno */
 
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?"+qtd);
+		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?"+qtd+"");
 		/*String idade = JOptionPane.showInputDialog("Qual a idade?" +qtd+ "?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String rg = JOptionPane.showInputDialog("Qual a RG ?");
@@ -91,11 +91,29 @@ public class PrimeiraClasseJava {
 		 }
 		 
 		 for (Aluno aluno :alunos) {
+			 
+		if (aluno.getNome().equalsIgnoreCase("alex")) {
+		 alunos.remove(aluno);
+		 break;
+		}
 		System.out.println(aluno);
 		System.out.println(" Resultado  " + aluno.getMediaNota());
 		System.out.println(" Media  e =" + aluno.getAlunoAprovado2());
 		System.out.println("-------------------------");
+		
 		 }
+		 for (Aluno aluno :alunos) {
+			 
+			 System.out.println("Alunos que sobraram");
+			 System.out.println(aluno.getNome());
+			 System.out.println("Sua materias sao ");
+			 
+			 for (Disciplina disciplina : aluno.getDisciplinas()) {
+				 System.out.println( disciplina.getDisciplina());				 
+			 }
+		 }
+		 
+		 
 
 		/* Aluno aluno2 = new Aluno(); /*Aqui sera o nome do aluno */
 		/*
