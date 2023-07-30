@@ -128,8 +128,7 @@ public class PrimeiraClasseJava {
 				 Disciplina disc =aluno.getDisciplinas().get(posd);
 				 System.out.println("Materia = " + disc.getDisciplina() + "Nota =" + disc.getNota());
 			 }/*terminando*/
-		 }
-		 
+		 }		 
 		 
 
 		/* Aluno aluno2 = new Aluno(); /*Aqui sera o nome do aluno */
