@@ -127,7 +127,7 @@ public class PrimeiraClasseJava {
 			 for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
 				 Disciplina disc =aluno.getDisciplinas().get(posd);
 				 System.out.println("Materia = " + disc.getDisciplina() + "Nota =" + disc.getNota());
-			 }
+			 }/*terminando*/
 		 }
 		 
 		 
