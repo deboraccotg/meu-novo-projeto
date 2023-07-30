@@ -90,7 +90,7 @@ public class PrimeiraClasseJava {
 		
 		 }
 		 
-		 for (Aluno aluno :alunos) {
+		/* for (Aluno aluno :alunos) {
 			 
 		if (aluno.getNome().equalsIgnoreCase("alex")) {
 		 alunos.remove(aluno);
@@ -102,7 +102,7 @@ public class PrimeiraClasseJava {
 		System.out.println("-------------------------");
 		
 		 }
-		 for (Aluno aluno :alunos) {
+		/* for (Aluno aluno :alunos) {
 			 
 			 System.out.println("Alunos que sobraram");
 			 System.out.println(aluno.getNome());
@@ -110,6 +110,23 @@ public class PrimeiraClasseJava {
 			 
 			 for (Disciplina disciplina : aluno.getDisciplinas()) {
 				 System.out.println( disciplina.getDisciplina());				 
+			 }
+		 }*/
+		 
+		 for (int pos = 0; pos < alunos.size(); pos ++) {
+			 
+			 Aluno aluno = alunos.get(pos) ;
+			 
+			 System.out.println("Aluno=" + aluno.getNome());
+			 System.out.println("MÉDia do aluno = " + aluno.getMediaNota());
+			 System.out.println("Resultado = " + aluno.getAlunoAprovado2());
+			 System.out.println("--------------------------------------");
+			 
+			 /*for (Disciplina disc : aluno.getDisciplinas()) {
+				 System.out.println("Materia = " + disc.getDisciplina() + "Nota =" + disc.getNota());*/
+			 for (int posd = 0; posd < aluno.getDisciplinas().size(); posd++) {
+				 Disciplina disc =aluno.getDisciplinas().get(posd);
+				 System.out.println("Materia = " + disc.getDisciplina() + "Nota =" + disc.getNota());
 			 }
 		 }
 		 
